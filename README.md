@@ -1,6 +1,10 @@
-# Code Challenge
+# Code Challenge Overview
 
-Code Challenge for Engineering applicants in 2021.
+We suggest that you spend 1-3hrs on this code challenge.  You may or may not finish this - either is ok. If we move forward to final interviews, we'll pair on your solution together, reviewing/troubleshooting/trying new things.
+
+* Testing is required.
+* Error handling is required.
+* In your readme, please tell us what you would do next if you spent more time on this.
 
 ## Requirements
 
