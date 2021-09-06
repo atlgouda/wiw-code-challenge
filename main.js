@@ -74,7 +74,7 @@ function createOutput(jsondata) {
   }
 }
 
-// Remove keys not used in output
+// Remove key-values not used in output
 function removeUnused(employeeWeeks) {
     employeeWeeks.forEach((element) => delete element.Total_Hours);
     employeeWeeks.forEach((element) => delete element.Shifts);
@@ -84,58 +84,9 @@ function removeUnused(employeeWeeks) {
 
 createOutput(jsondata);
 removeUnused(employeeWeeks)
-// createOutput(JSON.parse(fs.readFileSync("dataset.test.json")))
 
-// Remove keys not used in output
-// employeeWeeks.forEach((element) => delete element.Total_Hours);
-// employeeWeeks.forEach((element) => delete element.Shifts);
-// employeeWeeks.forEach((element) => delete element.Shift_Hours);
-// employeeWeeks.forEach((element) => delete element.EWID);
-
-
-console.log(employeeWeeks.slice(Math.max(employeeWeeks.length - 5, 0)));
-console.log(employeeWeeks.length);
-// const output = employeeWeeks.filter((v,i,a)=>a.findIndex(t=>(t.EmployeeID === v.EmployeeID && t.StartOfWeek===v.StartOfWeek))===i)
-var output = [...new Set(employeeWeeks)];
-// JSON.stringify(output)
-
-function uniqueEWIDs(arr, prop) {
-  const uniques = new Set(arr.map((item) => item[prop]));
-  return [...uniques].length == arr.length;
-}
-console.log(output.slice(Math.max(output.length - 5, 0)));
-console.log(output.length);
-console.log(uniqueEWIDs(output, "EWID"));
-
+// write output to output.json file
 const FileSystem = require("fs");
 FileSystem.writeFile("output.json", JSON.stringify(employeeWeeks), (err) => {
   if (err) throw err;
 });
-
-// function verifyShift(currentEmployeeWeek, shift) {
-//     // for (const e in currentEmployeeWeek.Shifts) {
-//         console.log("VERIFY TEST")
-//         // console.log(currentEmployeeWeek.Shifts)
-//         // const sample = currentEmployeeWeek.Shifts.find(function(x, index){
-//         //     console.log(x)
-//         //     return x.Clockin === true;
-//         // })
-//         // const sample = currentEmployeeWeek.Shifts.find(e => e.ClockIn)
-//         // console.log(sample)
-//         // console.log(shift.clockIn)
-//     // for( const prevShift in currentEmployeeWeek.Shifts) {
-//     //     console.log("SPLIT")
-//     //     console.log(Object.keys(prevShift))
-//     // }
-
-// }
-
-// try {
-//     if (newEW == {}) throw "currentWeek is empty"
-//     if (newEW.Shifts == []) throw "no Shifts listed"
-//     if (isNaN(newEW.EmployeeID)) throw "EmployeeID is not number"
-//     if ( newEW.Regular_Hours == 0 ) throw "no hours calculated"
-// }
-// catch(err) {
-//     throw err
-// }

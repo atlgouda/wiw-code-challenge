@@ -2,11 +2,18 @@
 
 Output is being sent to output.json file in project.
 
+Run project command:
+```
+node main.js
+```
+
 Things to do if I spent more time on challenge:
 * Add testing
 * Add additional error handling
 * Identify invalid shifts
 * Correct missing data (Some EmployeeWeeks not showing)
+
+I was not able to complete all of the challenge in the recommended window, but I would have spent the time to adjust in a real world scenario!
 
 # Code Challenge Overview
 
