@@ -1,3 +1,13 @@
+# Notes from Gouda
+
+Output is being sent to output.json file in project.
+
+Things to do if I spent more time on challenge:
+* Add testing
+* Add additional error handling
+* Identify invalid shifts
+* Correct missing data (Some EmployeeWeeks not showing)
+
 # Code Challenge Overview
 
 We suggest that you spend 1-3hrs on this code challenge.  You may or may not finish this - either is ok. If we move forward to final interviews, we'll pair on your solution together, reviewing/troubleshooting/trying new things.
